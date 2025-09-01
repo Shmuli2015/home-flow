@@ -2,6 +2,7 @@ import { router } from 'expo-router'
 import { View, Text } from 'react-native'
 import { useEffect, useState } from 'react'
 import SplashScreen from '@/components/SplashScreen'
+import Welcome from '@/components/welcome'
 
 const Index = () => {
   const [isReady, setIsReady] = useState(false);
@@ -9,7 +10,6 @@ const Index = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsReady(true)
-      router.push('/welcome')
     }, 2000)
   }, [])
 
@@ -18,9 +18,7 @@ const Index = () => {
   }
 
   return (
-    <View>
-      <Text>Index</Text>
-    </View>
+    <Welcome />
   )
 }
 

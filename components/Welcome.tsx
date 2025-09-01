@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import GradientBackground from "@/components/GradientBackground";
+import { router } from "expo-router";
 import { Dimensions, StyleSheet, Text, View } from "react-native";
 
 const { height } = Dimensions.get('window');
@@ -13,8 +14,8 @@ const Welcome = () => {
                     <Text style={styles.subtitle}>Your personal finance companion.</Text>
                 </View>
                 <View style={styles.buttons}>
-                    <Button title="Login" onPress={() => { }} buttonStyle={styles.loginButton} textStyle={styles.loginButtonText} />
-                    <Button title="Sign Up" onPress={() => { }} buttonStyle={styles.signUpButton} textStyle={styles.signUpButtonText} />
+                    <Button title="Login" onPress={() => { router.push('/(auth)/login') }} buttonStyle={styles.loginButton} textStyle={styles.loginButtonText} />
+                    <Button title="Sign Up" onPress={() => { router.push('/(auth)/signup') }} buttonStyle={styles.signUpButton} textStyle={styles.signUpButtonText} />
                 </View>
             </View>
         </GradientBackground>
